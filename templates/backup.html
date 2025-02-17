@@ -11,11 +11,21 @@
 
 <body>
     <div class="container">
-        <h1>Goal Guru</h1>
+        <h2>Lägg till ett mål</h2>
         <form method="POST">
-            <button type="submit" name="choice" value="add_goal">Lägg till ett mål</button>
-            <button type="submit" name="choice" value="view_goals">Se alla mål</button>
-            <button type="submit" name="choice" value="exit">Avsluta programmet</button>
+            <div class="mb-3">
+                <label for="goal" class="form-label">Mål:</label>
+                <input type="text" class="form-control" id="goal" name="goal" required>
+            </div>
+            <div class="mb-3">
+                <label for="deadline" class="form-label">Deadline:</label>
+                <input type="date" class="form-control" id="deadline" name="deadline" required>
+            </div>
+            <div class="mb-3">
+                <label for="daily_task" class="form-label">Dagens uppgift:</label>
+                <input type="text" class="form-control" id="daily_task" name="daily_task" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Spara mål</button>
         </form>
     </div>
 </body>

@@ -8,18 +8,22 @@ app = Flask(__name__)
 add_goal_instance = AddGoal()
 view_goals_instance = ViewGoals()
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    while True:  # Loop för menyn
+@app.route('/')
+def start():
+    return render_template('start.html')
+
+@app.route('/menu', methods=['GET', 'POST'])
+def menu():
+    while True:
         if request.method == 'POST':
             choice = request.form.get('choice')
             if choice == 'add_goal':
                 return redirect(url_for('add_goal'))
             elif choice == 'view_goals':
                 return redirect(url_for('view_goals'))
-            elif choice == 'exit':  # Lägg till ett val för att avsluta
-                return "Programmet avslutas"  # Eller en annan lämplig respons
-        return render_template('index.html')
+            elif choice == 'exit':
+                return redirect(url_for('start'))  # Återvänd till startsidan
+        return render_template('menu.html')
 
 @app.route('/add_goal', methods=['GET', 'POST'])
 def add_goal():
@@ -42,7 +46,7 @@ def add_goal():
             print(f"Error saving goals to JSON: {e}")
             return "Ett fel uppstod vid sparandet av målet."
 
-        return redirect(url_for('index'))  # Redirect till index efter att mål har lagts till
+        return redirect(url_for('menu'))  # Redirect till menyn efter att mål har lagts till
 
     return render_template('add_goal.html') # Visa formuläret om det är GET request
 

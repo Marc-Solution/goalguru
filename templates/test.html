@@ -126,33 +126,4 @@
             </div>
 
             <div class="question">
-                <label for="today_step" class="form-label">Vad kan du ta för steg gentemot ditt mål idag?</label>
-                <textarea class="form-control" id="today_step" name="today_step" required></textarea>
-                <button type="submit" class="btn btn-success">Skicka</button>
-            </div>
-        </form>
-    </div>
-
-    <script>
-        const questions = document.querySelectorAll('.question');
-        const nextButtons = document.querySelectorAll('.next-step');
-
-        let currentQuestion = 0;
-
-        function showQuestion(index) {
-            questions[currentQuestion].classList.remove('active');
-            questions[index].classList.add('active');
-            currentQuestion = index;
-        }
-
-        nextButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                if (currentQuestion < questions.length - 1) {
-                    showQuestion(currentQuestion + 1);
-                }
-            });
-        });
-    </script>
-</body>
-
-</html>
+                <label for="today_step" class="form-label">Vad kan du ta för steg gentemot ditt mål idag?

@@ -2,10 +2,10 @@
     {
         "goal": "Att skapa Goal Guru Appen",
         "deadline": "2025-03-02",
-        "daily_task": "Att skapa en f\u00f6rsta version av appen"
+        "daily_task": "Att skapa en första version av appen"
     },
     {
-        "goal": "F\u00e5 minst tio medlemmar till Abundance Academy",
+        "goal": "Få minst tio medlemmar till Abundance Academy",
         "deadline": "2025-03-03",
         "daily_task": "Prata med Ania och bjuda in henne till Abundance Academy"
     },
@@ -17,16 +17,31 @@
     {
         "goal": "Lansera Abundance Academy",
         "deadline": "2025-03-03",
-        "daily_task": "Skissa p\u00e5 ett erbjudande"
+        "daily_task": "Skissa på ett erbjudande"
     },
     {
-        "goal": "G\u00e5 ner 10 kilo",
+        "goal": "Gå ner 10 kilo",
         "deadline": "2025-04-14",
-        "daily_task": "Tr\u00e4na i 30 minuter"
+        "daily_task": "Träna i 30 minuter"
     },
     {
-        "goal": "\u00c4lska med Marco",
+        "goal": "Älska med Marco",
         "deadline": "2025-02-28",
-        "daily_task": "h\u00e5ngla"
+        "daily_task": "hångla"
+    },
+    {
+        "important_goal": "30 000 kr/m",
+        "meaning_of_goal": "Frihet",
+        "deadline": "2025-06-01",
+        "life_changes": "Lycka",
+        "impact_on_others": "Frid och kärlek",
+        "achievements_for_others": "Ta hand om dom bättre",
+        "feelings_if_fail": "Ledsen",
+        "life_if_success": "Fri och lycklig",
+        "life_details": "Glädje och flöde hela dagen lång",
+        "plan": "Brand Story framwork",
+        "obstacles": "Brist på fokus. Ha tydliga dagliga mål",
+        "next_milestone": "Få in 10 medlemmar på Abundance academy",
+        "today_step": "Göra denna Goal Story"
     }
 ]
