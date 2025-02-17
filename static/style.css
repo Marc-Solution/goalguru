@@ -5,6 +5,13 @@ body {
     padding: 20px;
 }
 
+.goal-guru-image {
+    max-width: 300px;
+    /* Justera bredden här */
+    height: auto;
+    /* Behåll proportionerna */
+}
+
 .container {
     background: white;
     padding: 20px;
