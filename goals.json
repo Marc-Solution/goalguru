@@ -73,5 +73,20 @@
         "obstacles": "Test2",
         "next_milestone": "Test2",
         "today_step": "Test2"
+    },
+    {
+        "important_goal": "Test3",
+        "meaning_of_goal": "Test3",
+        "deadline": "2025-02-28",
+        "life_changes": "Test3",
+        "impact_on_others": "Test3",
+        "achievements_for_others": "Test3",
+        "feelings_if_fail": "Test3",
+        "life_if_success": "Test3",
+        "life_details": "Test3",
+        "plan": "Test3",
+        "obstacles": "Test3",
+        "next_milestone": "Test3",
+        "today_step": "Test3"
     }
 ]
