@@ -43,5 +43,35 @@
         "obstacles": "Brist på fokus. Ha tydliga dagliga mål",
         "next_milestone": "Få in 10 medlemmar på Abundance academy",
         "today_step": "Göra denna Goal Story"
+    },
+    {
+        "important_goal": "Test1",
+        "meaning_of_goal": "Test1",
+        "deadline": "2025-02-22",
+        "life_changes": "Test1",
+        "impact_on_others": "Test1",
+        "achievements_for_others": "Test1",
+        "feelings_if_fail": "Test1",
+        "life_if_success": "Test1",
+        "life_details": "Test1",
+        "plan": "Test1",
+        "obstacles": "Test1",
+        "next_milestone": "Test1",
+        "today_step": "Test1"
+    },
+    {
+        "important_goal": "Test2",
+        "meaning_of_goal": "Test2",
+        "deadline": "2025-03-01",
+        "life_changes": "Test2",
+        "impact_on_others": "Test2",
+        "achievements_for_others": "Test2",
+        "feelings_if_fail": "Test2",
+        "life_if_success": "Test2",
+        "life_details": "Test2",
+        "plan": "Test2",
+        "obstacles": "Test2",
+        "next_milestone": "Test2",
+        "today_step": "Test2"
     }
 ]

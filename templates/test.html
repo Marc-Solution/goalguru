@@ -21,14 +21,17 @@
 <body>
     <div class="container">
         <h2>Lägg till ett mål</h2>
-        <p>Välkommen! Här skapar du din Goal Story! Här får du möjlighet att utforska dina drömmar, definiera dina mål
-            och skapa en plan för att uppnå dem. Ta dig tid att svara ärligt och reflekterande på frågorna. Ju mer du
-            investerar i din Goal Story, desto större chans har du att lyckas.</p>
-        <p>Kom ihåg att din Goal Story är ett levande dokument. Återvänd hit regelbundet för att följa upp dina
-            framsteg, justera din plan och fortsätta att utvecklas mot dina mål.</p>
+        <div id="welcome-message">
+            <p>Välkommen! Här skapar du din Goal Story! Här får du möjlighet att utforska dina drömmar, definiera dina
+                mål och skapa en plan för att uppnå dem. Ta dig tid att svara ärligt och reflekterande på frågorna. Ju
+                mer du investerar i din Goal Story, desto större chans har du att lyckas.</p>
+            <p>Kom ihåg att din Goal Story är ett levande dokument. Återvänd hit regelbundet för att följa upp dina
+                framsteg, justera din plan och fortsätta att utvecklas mot dina mål.</p>
+            <button id="start-button" type="button" class="btn btn-primary">Starta</button>
+        </div>
 
         <form method="POST">
-            <div class="question active">
+            <div class="question">
                 <label for="important_goal" class="form-label">Vad är ditt viktigaste mål just nu och varför är det så
                     viktigt för dig?</label>
                 <textarea class="form-control" id="important_goal" name="important_goal" required></textarea>
@@ -122,8 +125,4 @@
                     målet? Vilket är det närmaste delmålet på din väg mot det stora målet? När planerar du att uppnå
                     det? Hur kommer du att fira dina framsteg längs vägen?</label>
                 <textarea class="form-control" id="next_milestone" name="next_milestone" required></textarea>
-                <button type="button" class="btn btn-primary next-step">Nästa</button>
-            </div>
-
-            <div class="question">
-                <label for="today_step" class="form-label">Vad kan du ta för steg gentemot ditt mål idag?
+                <button type="button" class
