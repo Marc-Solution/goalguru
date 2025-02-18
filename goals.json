@@ -1,92 +1,18 @@
 [
     {
-        "goal": "Att skapa Goal Guru Appen",
-        "deadline": "2025-03-02",
-        "daily_task": "Att skapa en första version av appen"
-    },
-    {
-        "goal": "Få minst tio medlemmar till Abundance Academy",
-        "deadline": "2025-03-03",
-        "daily_task": "Prata med Ania och bjuda in henne till Abundance Academy"
-    },
-    {
-        "goal": "Publicera min bok",
-        "deadline": "2025-05-15",
-        "daily_task": "Skriva en outline"
-    },
-    {
-        "goal": "Lansera Abundance Academy",
-        "deadline": "2025-03-03",
-        "daily_task": "Skissa på ett erbjudande"
-    },
-    {
-        "goal": "Gå ner 10 kilo",
-        "deadline": "2025-04-14",
-        "daily_task": "Träna i 30 minuter"
-    },
-    {
-        "goal": "Älska med Marco",
-        "deadline": "2025-02-28",
-        "daily_task": "hångla"
-    },
-    {
-        "important_goal": "30 000 kr/m",
-        "meaning_of_goal": "Frihet",
-        "deadline": "2025-06-01",
-        "life_changes": "Lycka",
-        "impact_on_others": "Frid och kärlek",
-        "achievements_for_others": "Ta hand om dom bättre",
-        "feelings_if_fail": "Ledsen",
-        "life_if_success": "Fri och lycklig",
-        "life_details": "Glädje och flöde hela dagen lång",
-        "plan": "Brand Story framwork",
-        "obstacles": "Brist på fokus. Ha tydliga dagliga mål",
-        "next_milestone": "Få in 10 medlemmar på Abundance academy",
-        "today_step": "Göra denna Goal Story"
-    },
-    {
-        "important_goal": "Test1",
-        "meaning_of_goal": "Test1",
-        "deadline": "2025-02-22",
-        "life_changes": "Test1",
-        "impact_on_others": "Test1",
-        "achievements_for_others": "Test1",
-        "feelings_if_fail": "Test1",
-        "life_if_success": "Test1",
-        "life_details": "Test1",
-        "plan": "Test1",
-        "obstacles": "Test1",
-        "next_milestone": "Test1",
-        "today_step": "Test1"
-    },
-    {
-        "important_goal": "Test2",
-        "meaning_of_goal": "Test2",
-        "deadline": "2025-03-01",
-        "life_changes": "Test2",
-        "impact_on_others": "Test2",
-        "achievements_for_others": "Test2",
-        "feelings_if_fail": "Test2",
-        "life_if_success": "Test2",
-        "life_details": "Test2",
-        "plan": "Test2",
-        "obstacles": "Test2",
-        "next_milestone": "Test2",
-        "today_step": "Test2"
-    },
-    {
-        "important_goal": "Test3",
-        "meaning_of_goal": "Test3",
-        "deadline": "2025-02-28",
-        "life_changes": "Test3",
-        "impact_on_others": "Test3",
-        "achievements_for_others": "Test3",
-        "feelings_if_fail": "Test3",
-        "life_if_success": "Test3",
-        "life_details": "Test3",
-        "plan": "Test3",
-        "obstacles": "Test3",
-        "next_milestone": "Test3",
-        "today_step": "Test3"
+        "goal_name": "1 miljon per månad genom min app",
+        "important_goal": "Mitt mål är att tjäna mer än 1 miljon kr per månad med lätthet genom min meditations app. ",
+        "meaning_of_goal": "Det vore paradiset p jorden för mig. Jag kommer vara fri och älska livet varje dag. Jag kommer bara göra det jag älskar varje dag. ",
+        "deadline": "2026-08-05",
+        "life_changes": "Oj, Jag kommer utvecklas så snabbt efterson jag bara lägger min energi på det som får min själ att sjunga. Varje dag är ett fantastiskt äventyr. Jag gör så roliga projekt. Jag startar upp någonting tillsammans med mio. Jag skaffar en kreativt center för mig och barnen. Musik studie, pod studio, film studie, gym, det är paradiset på jorden. Jag flyttar till ett varmt land. ",
+        "impact_on_others": "Alla i min familj kommer även de att thrive. Jag kommer att fokusera mer på att alla ska blomstra",
+        "achievements_for_others": "Jag kommer se till att Carro aldrig mer behöver jobba i sitt liv. Hon kan bara fokusera på det hon älskar. Alla i min tribe kommer att thrive :) ",
+        "feelings_if_fail": "Frustrerad och sorgsen",
+        "life_if_success": "Paradiset på jorden. Jag skulle vara lycklig från morgon till kväll. JAg går i skogen. Jag bor i ett hus precis vid natur och hav. Jag är i ett inspirerat tillstånd majoriteten av min tid.",
+        "life_details": "Wow, lycka hela tiden. Jag satsar på att ta hand om min kropp. Jag är väldigt diciplinerad och fri. JAg älskar vad jag gör varje dag. ",
+        "plan": "Att bemästra the storybrand framework. Att bemästra mitt budskap. Lansera Abundance Academy, bygga en hel flywheel som drar in kunder från alla håll. Göra ads för appen. Göra sammarbeten med influensers. Ha den på flera olika språk och se till att jag för 100 nya prenumeranter varje dag.",
+        "obstacles": "Det ända hindret egentligen är att tappa fokus och tappa modet. JAg tänker alltid ha kvar mitt fokus på mitt mål och min visio och mål. Jag kommer alltid se til att kultivera inspiration hopp och mod. ",
+        "next_milestone": "Mitt nästa del mål är att lansera den första prototypen av appen redan nu i år. ",
+        "today_step": "Att träna mig i att koda så att jag blir skicklig nog att skapa appen. "
     }
 ]

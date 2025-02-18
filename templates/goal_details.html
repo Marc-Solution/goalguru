@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Goal Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        .goal-details {
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .goal-details h1 {
+            margin-bottom: 75px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .goal-details h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .goal-details p {
+            margin-bottom: 75px;
+            text-align: left;
+            font-size: 1.2rem;
+            /* Lite större text */
+        }
+
+        .goal-details strong {
+            font-weight: bold;
+        }
+
+        .divider {
+            border-top: 1px solid #dee2e6;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="goal-details">
+            <h1>{{ goal.goal_name }}</h1>
+            <div class="divider"></div>
+
+            <h2>Viktigaste mål:</h2>
+            <p>{{ goal.important_goal }}</p>
+            <div class="divider"></div>
+
+            <h2>Vad målet betyder för dig:</h2>
+            <p>{{ goal.meaning_of_goal }}</p>
+            <div class="divider"></div>
+
+            <h2>Deadline:</h2>
+            <p>{{ goal.deadline }}</p>
+            <div class="divider"></div>
+
+            <h2>Hur livet förändras:</h2>
+            <p>{{ goal.life_changes }}</p>
+            <div class="divider"></div>
+
+            <h2>Impact på andra:</h2>
+            <p>{{ goal.impact_on_others }}</p>
+            <div class="divider"></div>
+
+            <h2>Achievements för andra:</h2>
+            <p>{{ goal.achievements_for_others }}</p>
+            <div class="divider"></div>
+
+            <h2>Känslor om misslyckande:</h2>
+            <p>{{ goal.feelings_if_fail }}</p>
+            <div class="divider"></div>
+
+            <h2>Livet om du lyckas:</h2>
+            <p>{{ goal.life_if_success }}</p>
+            <div class="divider"></div>
+
+            <h2>Livsdetaljer:</h2>
+            <p>{{ goal.life_details }}</p>
+            <div class="divider"></div>
+
+            <h2>Plan:</h2>
+            <p>{{ goal.plan }}</p>
+            <div class="divider"></div>
+
+            <h2>Hinder:</h2>
+            <p>{{ goal.obstacles }}</p>
+            <div class="divider"></div>
+
+            <h2>Nästa delmål:</h2>
+            <p>{{ goal.next_milestone }}</p>
+            <div class="divider"></div>
+
+            <h2>Dagens uppgift:</h2>
+            <p>{{ goal.today_step }}</p>
+            <div class="divider"></div>
+        </div>
+
+        <a href="/view_goals" class="btn btn-secondary">Tillbaka till alla mål</a>
+    </div>
+</body>
+
+</html>

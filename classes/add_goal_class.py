@@ -1,5 +1,6 @@
 class AddGoal:
     def __init__(self):
+        self.goal_name = ""
         self.important_goal = ""
         self.meaning_of_goal = ""
         self.deadline = ""
@@ -15,6 +16,13 @@ class AddGoal:
         self.today_step = ""
 
     # Setter-metoder
+
+    def set_goal_name(self, goal_name):
+        self.goal_name = goal_name
+
+    def get_goal_name(self):
+        return self.goal_name
+    
     def set_important_goal(self, important_goal):
         self.important_goal = important_goal
 

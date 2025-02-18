@@ -28,6 +28,7 @@ def menu():
 def add_goal():
     if request.method == 'POST':
         # Hämta datan från formuläret och spara i AddGoal-instansen
+        add_goal_instance.set_goal_name(request.form.get('goal_name'))  # Ny kod
         add_goal_instance.set_important_goal(request.form.get('important_goal'))
         add_goal_instance.set_meaning_of_goal(request.form.get('meaning_of_goal'))
         add_goal_instance.set_deadline(request.form.get('deadline'))
@@ -43,14 +44,15 @@ def add_goal():
         add_goal_instance.set_today_step(request.form.get('today_step'))
 
         # Spara datan i JSON-filen
-        goals = []  # Skapa en tom lista om filen inte finns
+        goals = []
         try:
             with open('goals.json', 'r') as f:
                 goals = json.load(f)
         except FileNotFoundError:
-            pass  # Filen finns inte, fortsätt med tom lista
+            pass
 
         goals.append({
+            "goal_name": add_goal_instance.get_goal_name(),  # Ny kod
             "important_goal": add_goal_instance.get_important_goal(),
             "meaning_of_goal": add_goal_instance.get_meaning_of_goal(),
             "deadline": add_goal_instance.get_deadline(),
@@ -68,7 +70,7 @@ def add_goal():
 
         try:
             with open('goals.json', 'w') as f:
-                json.dump(goals, f, indent=4, ensure_ascii=False)  # ensure_ascii=False för att hantera svenska tecken
+                json.dump(goals, f, indent=4, ensure_ascii=False)
         except Exception as e:
             print(f"Error saving goals to JSON: {e}")
             return "Ett fel uppstod vid sparandet av målet."
@@ -77,6 +79,19 @@ def add_goal():
 
     return render_template('add_goal.html')
 
+@app.route('/goal_details/<goal_name>')
+def goal_details(goal_name):
+    try:
+        with open('goals.json', 'r') as f:
+            goals = json.load(f)
+    except FileNotFoundError:
+        goals = []
+
+    for goal in goals:
+        if goal['goal_name'] == goal_name:
+            return render_template('goal_details.html', goal=goal)
+
+    return "Mål inte hittat"  # Om målet inte finns
 
 @app.route('/view_goals')
 def view_goals():
@@ -84,7 +99,7 @@ def view_goals():
         with open('goals.json', 'r') as f:
             goals = json.load(f)
     except FileNotFoundError:
-        goals = []  # Hantera om filen inte finns
+        goals = []
     return render_template('view_goals.html', goals=goals)
 
 

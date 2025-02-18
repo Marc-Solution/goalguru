@@ -23,9 +23,9 @@
             <tbody>
                 {% for goal in goals %}
                 <tr>
-                    <td>{{ goal.goal }}</td>
+                    <td><a href="/goal_details/{{ goal.goal_name }}">{{ goal.goal_name }}</a></td>
                     <td>{{ goal.deadline }}</td>
-                    <td>{{ goal.daily_task }}</td>
+                    <td>{{ goal.today_step }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
