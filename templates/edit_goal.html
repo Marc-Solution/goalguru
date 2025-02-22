@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Guru - Redigera mål</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Redigera mål: {{ goal.goal_name }}</h2>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="goal_name" class="form-label">Målnamn:</label>
+                <input type="text" class="form-control" id="goal_name" name="goal_name" value="{{ goal.goal_name }}"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="important_goal" class="form-label">Vad är ditt viktigaste mål just nu och varför är det så
+                    viktigt för dig?</label>
+                <textarea class="form-control" id="important_goal" name="important_goal"
+                    required>{{ goal.important_goal }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="meaning_of_goal" class="form-label">Vad betyder det här målet för dig personligen?</label>
+                <textarea class="form-control" id="meaning_of_goal" name="meaning_of_goal"
+                    required>{{ goal.meaning_of_goal }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="deadline" class="form-label">Deadline:</label>
+                <input type="date" class="form-control" id="deadline" name="deadline" value="{{ goal.deadline }}"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="life_changes" class="form-label">Hur kommer ditt liv förändras?</label>
+                <textarea class="form-control" id="life_changes" name="life_changes"
+                    required>{{ goal.life_changes }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="impact_on_others" class="form-label">Hur kommer det att påverka andra?</label>
+                <textarea class="form-control" id="impact_on_others" name="impact_on_others"
+                    required>{{ goal.impact_on_others }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="achievements_for_others" class="form-label">Vad kan du göra för andra?</label>
+                <textarea class="form-control" id="achievements_for_others" name="achievements_for_others"
+                    required>{{ goal.achievements_for_others }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="feelings_if_fail" class="form-label">Känslor om misslyckande?</label>
+                <textarea class="form-control" id="feelings_if_fail" name="feelings_if_fail"
+                    required>{{ goal.feelings_if_fail }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="life_if_success" class="form-label">Livet om du lyckas?</label>
+                <textarea class="form-control" id="life_if_success" name="life_if_success"
+                    required>{{ goal.life_if_success }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="life_details" class="form-label">Livsdetaljer?</label>
+                <textarea class="form-control" id="life_details" name="life_details"
+                    required>{{ goal.life_details }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="plan" class="form-label">Plan?</label>
+                <textarea class="form-control" id="plan" name="plan" required>{{ goal.plan }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="obstacles" class="form-label">Hinder?</label>
+                <textarea class="form-control" id="obstacles" name="obstacles" required>{{ goal.obstacles }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="next_milestone" class="form-label">Nästa delmål?</label>
+                <textarea class="form-control" id="next_milestone" name="next_milestone"
+                    required>{{ goal.next_milestone }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="today_step" class="form-label">Dagens uppgift?</label>
+                <textarea class="form-control" id="today_step" name="today_step"
+                    required>{{ goal.today_step }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Spara ändringar</button>
+            <a href="/view_goals" class="btn btn-secondary">Avbryt</a>
+        </form>
+    </div>
+</body>
+
+</html>

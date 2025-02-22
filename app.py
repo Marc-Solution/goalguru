@@ -4,32 +4,29 @@ from classes.view_goals_class import ViewGoals
 import json
 
 app = Flask(__name__)
-app.secret_key = 'my_secret_key'  # Hemlig nyckel för session, kan ändras till valfri sträng
+app.secret_key = 'my_secret_key'
 
 add_goal_instance = AddGoal()
 view_goals_instance = ViewGoals()
 
 @app.route('/')
 def start():
-    exited = session.pop('exited', False)  # Hämta exited från session, default False
-    print(f"Start körs, exited={exited}")  # Debug: Visar värdet på exited
+    exited = session.pop('exited', False)
+    print(f"Start körs, exited={exited}")
     return render_template('start.html', exited=exited)
 
-# Menyn fungerar som en loop genom navigering:
-# /menu -> /add_goal eller /view_goals -> tillbaka till /menu.
-# "Exit" bryter loopen genom att gå till /start med ett avslutsmeddelande.
 @app.route('/menu', methods=['GET', 'POST'])
 def menu():
     if request.method == 'POST':
         choice = request.form.get('choice')
-        print(f"Val: {choice}")  # Debug: Skriver ut användarens val
+        print(f"Val: {choice}")
         if choice == 'add_goal':
             return redirect(url_for('add_goal'))
         elif choice == 'view_goals':
             return redirect(url_for('view_goals'))
         elif choice == 'exit':
-            session['exited'] = True  # Sätt exited i session
-            print("Session['exited'] satt till True")  # Debug: Bekräftar att exit triggas
+            session['exited'] = True
+            print("Session['exited'] satt till True")
             return redirect(url_for('start'))
     return render_template('menu.html')
 
@@ -104,6 +101,76 @@ def view_goals():
     except FileNotFoundError:
         goals = []
     return render_template('view_goals.html', goals=goals)
+
+@app.route('/edit_goal/<goal_name>', methods=['GET', 'POST'])
+def edit_goal(goal_name):
+    try:
+        with open('goals.json', 'r') as f:
+            goals = json.load(f)
+    except FileNotFoundError:
+        goals = []
+
+    goal_to_edit = None
+    for goal in goals:
+        if goal['goal_name'] == goal_name:
+            goal_to_edit = goal
+            break
+    
+    if not goal_to_edit:
+        return "Mål inte hittat", 404
+
+    if request.method == 'POST':
+        for i, goal in enumerate(goals):
+            if goal['goal_name'] == goal_name:
+                goals[i] = {
+                    "goal_name": request.form.get('goal_name'),
+                    "important_goal": request.form.get('important_goal'),
+                    "meaning_of_goal": request.form.get('meaning_of_goal'),
+                    "deadline": request.form.get('deadline'),
+                    "life_changes": request.form.get('life_changes'),
+                    "impact_on_others": request.form.get('impact_on_others'),
+                    "achievements_for_others": request.form.get('achievements_for_others'),
+                    "feelings_if_fail": request.form.get('feelings_if_fail'),
+                    "life_if_success": request.form.get('life_if_success'),
+                    "life_details": request.form.get('life_details'),
+                    "plan": request.form.get('plan'),
+                    "obstacles": request.form.get('obstacles'),
+                    "next_milestone": request.form.get('next_milestone'),
+                    "today_step": request.form.get('today_step')
+                }
+                break
+        
+        try:
+            with open('goals.json', 'w') as f:
+                json.dump(goals, f, indent=4, ensure_ascii=False)
+        except Exception as e:
+            print(f"Error saving edited goal to JSON: {e}")
+            return "Ett fel uppstod vid sparandet av ändringarna."
+        
+        return redirect(url_for('view_goals'))
+
+    return render_template('edit_goal.html', goal=goal_to_edit)
+
+@app.route('/delete_goal/<goal_name>', methods=['GET'])
+def delete_goal(goal_name):
+    try:
+        with open('goals.json', 'r') as f:
+            goals = json.load(f)
+    except FileNotFoundError:
+        goals = []
+
+    # Ta bort målet från listan
+    goals = [goal for goal in goals if goal['goal_name'] != goal_name]
+
+    # Spara den uppdaterade listan till goals.json
+    try:
+        with open('goals.json', 'w') as f:
+            json.dump(goals, f, indent=4, ensure_ascii=False)
+    except Exception as e:
+        print(f"Error deleting goal from JSON: {e}")
+        return "Ett fel uppstod vid radering av målet."
+
+    return redirect(url_for('view_goals'))
 
 if __name__ == '__main__':
     app.run(debug=True)

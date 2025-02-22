@@ -14,37 +14,5 @@
         "obstacles": "Test 1",
         "next_milestone": "Test 1",
         "today_step": "Test 1"
-    },
-    {
-        "goal_name": "Mål 2 Test",
-        "important_goal": "Test2",
-        "meaning_of_goal": "Test2",
-        "deadline": "2025-03-09",
-        "life_changes": "Test2",
-        "impact_on_others": "Test2",
-        "achievements_for_others": "Test2",
-        "feelings_if_fail": "Test2",
-        "life_if_success": "Test2",
-        "life_details": "Test2",
-        "plan": "Test2",
-        "obstacles": "Test2",
-        "next_milestone": "Test2",
-        "today_step": "Test2"
-    },
-    {
-        "goal_name": "Test Mål 3",
-        "important_goal": "Test 3",
-        "meaning_of_goal": "Test 3",
-        "deadline": "2025-03-08",
-        "life_changes": "Test 3",
-        "impact_on_others": "Test 3",
-        "achievements_for_others": "Test 3",
-        "feelings_if_fail": "Test 3",
-        "life_if_success": "Test 3",
-        "life_details": "Test 3",
-        "plan": "Test 3",
-        "obstacles": "Test 3",
-        "next_milestone": "Test 3",
-        "today_step": "Test 3"
     }
 ]
